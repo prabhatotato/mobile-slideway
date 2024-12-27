@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { MainSidebar } from "@/components/MainSidebar";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -17,14 +16,12 @@ const Index = () => {
       
       <main className="flex-1">
         {isMobile && (
-          <Button
-            variant="ghost"
-            size="icon"
-            className="m-4"
+          <button
+            className="p-4 hover:bg-gray-100 rounded-lg transition-colors m-4"
             onClick={() => setIsSidebarOpen(true)}
           >
             <Menu className="h-6 w-6" />
-          </Button>
+          </button>
         )}
         
         <div className="p-6">

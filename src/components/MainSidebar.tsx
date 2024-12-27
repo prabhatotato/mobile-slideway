@@ -1,6 +1,5 @@
 import { Home, FileCode2, Cloud, HelpCircle, Settings, PhoneCall, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 interface NavItem {
@@ -39,15 +38,14 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
       
       <nav className="flex-1 p-4 space-y-2">
         {navItems.map((item) => (
-          <Button
+          <button
             key={item.label}
-            variant="ghost"
-            className="w-full justify-start gap-3 font-normal"
+            className="w-full flex items-center gap-3 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
             onClick={() => isMobile && onClose()}
           >
             <item.icon className="h-5 w-5" />
-            {item.label}
-          </Button>
+            <span className="font-normal">{item.label}</span>
+          </button>
         ))}
       </nav>
     </div>
