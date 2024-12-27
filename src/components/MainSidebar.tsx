@@ -44,7 +44,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
             onClick={() => isMobile && onClose()}
           >
             <item.icon className="h-5 w-5" />
-            <span className="font-normal">{item.label}</span>
+            <span className="font-normal text-inherit">{item.label}</span>
           </button>
         ))}
       </nav>
